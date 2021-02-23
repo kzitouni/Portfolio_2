@@ -4,9 +4,9 @@ import { ThemeProvider } from "styled-components";
 function MyApp({ Component, pageProps }) {
 
   const theme = {
-    mobile: `(max-width: 476px)`,
-    tablet: `(max-width: 765px)`, 
-    laptop: `(max-width: 990px)`,
+    mobile: `(max-width: 479px)`,
+    tablet: `(max-width: 767px)`, 
+    laptop: `(max-width: 991px)`,
   };
 
   return (

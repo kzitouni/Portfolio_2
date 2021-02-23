@@ -4,29 +4,25 @@ import {
     Container,
     Navigation,
     Logo,
-    Button,
     NavItem,
-    HoverA,
-    HoverAll,
-    HoverItem,
-    TitleText,
-    HInfo,
-    HoverContainer,
-    Arrow
-} from "./Styles/Styles"
-import Nav from "../Nav/Nav"
-import { FaChevronDown } from "react-icons/fa";
-import {router} from 'next'
-import { LogoTag } from "../Nav/Styles/Styles";
+    BurgerMenu,
+    NavButton,
+    NavOverlay,
+    LogoTag
+} from "./Styles"
+import Hamburger from 'hamburger-react'
 
 export default function NavBar(props){
-    const [windowDimension, setWindowDimension] = useState(null);
 
+    const [isOpen, setOpen] = useState(false)
+
+    const [windowDimension, setWindowDimension] = useState(null);
+    const [isMobile, setIsMobile] = useState(false)
     useEffect(() => {
         setWindowDimension(window.innerWidth);
       }, []);
 
-      useEffect(() => {
+    useEffect(() => {
         function handleResize() {
           setWindowDimension(window.innerWidth);
         }
@@ -34,130 +30,35 @@ export default function NavBar(props){
         window.addEventListener("resize", handleResize);
         return () => window.removeEventListener("resize", handleResize);
       }, []);
-    
-      const isMobile = windowDimension <= 990;
 
-    var displayLinks = props.display
+      useEffect(() => {
+          if(windowDimension > 990){
+            setIsMobile(false)
+          } else {
+            setIsMobile(true)
+          }
+      }, [windowDimension])
 
+ 
     return(
-        !isMobile ?
-        <Wrapper>
-            <Container>
-                <LogoTag href="/">
-            <Logo src="/shopspace_logo.svg" />
-                </LogoTag>
-                <Navigation>
-                    {
-                        displayLinks ?
-                            <>
-                                <NavItem>
-                                    <HoverContainer>
-                                        <HoverA href="#">
-                                            Products 
-                                            <Arrow>
-                                                <FaChevronDown />
-                                            </Arrow>
-                                        </HoverA>
-                                        <HoverAll>
-                                            <HoverItem href="/Platforms">
-                                                <TitleText>
-                                                    Page Builder
-                                                </TitleText>
-                                                <HInfo>
-                                                    Powerful store builder for ecommerce brands and agencies
-                                                </HInfo>
-                                            </HoverItem>
-                                        </HoverAll>
-                                    </HoverContainer>
-                                </NavItem>
-                                <NavItem>
-                                    <HoverContainer>
-                                        <HoverA>
-                                            Resources
-                                            <Arrow>
-                                                <FaChevronDown />
-                                            </Arrow>
-                                        </HoverA>
-                                        <HoverAll>
-                                            <HoverItem href="/Blog">
-                                                <TitleText >
-                                                    Blog
-                                                </TitleText>
-                                                <HInfo>
-                                                    Ecommerce Industry Insights
-                                                </HInfo>
-                                            </HoverItem>
-                                        </HoverAll>
-                                    </HoverContainer>
-                                </NavItem>
-                                <NavItem>
-                                    <HoverContainer>
-                                        <HoverA >
-                                            Partners 
-                                            <Arrow>
-                                                <FaChevronDown />
-                                            </Arrow>
-                                        </HoverA>
-                                        <HoverAll>
-                                            <HoverItem href="/Partner">
-                                                <TitleText >
-                                                    Become a Partner
-                                                </TitleText>
-                                                <HInfo>
-                                                    Grow your agency by partnering with us
-                                                </HInfo>
-                                            </HoverItem>
-                                        </HoverAll>
-                                    </HoverContainer>
-                                </NavItem>
-                                <NavItem>
-                                    <HoverContainer>
-                                        <HoverA>
-                                            Company 
-                                            <Arrow>
-                                                <FaChevronDown />
-                                            </Arrow>
-                                        </HoverA> 
-                                        <HoverAll>
-                                            <HoverItem href="/About">
-                                                <TitleText >
-                                                    About us
-                                                </TitleText>
-                                                <HInfo>
-                                                    Learn about our history and our plans for the future
-                                                </HInfo>
-                                            </HoverItem>
-                                            <HoverItem href="/Careers">
-                                                <TitleText >
-                                                    Careers
-                                                </TitleText>
-                                                <HInfo>
-                                                    Join our growing team of developers
-                                                </HInfo>
-                                            </HoverItem>
-                                            <HoverItem href="/Contact">
-                                                <TitleText >
-                                                    Contact Us
-                                                </TitleText>
-                                                <HInfo>
-                                                    Have any question? Ask our team
-                                                </HInfo>
-                                            </HoverItem>
-                                        </HoverAll>
-                                    </HoverContainer>
-                                </NavItem>
-                    
-                                <NavItem>
-                                    <Button href="/Platforms">
-                                        Get Started
-                                    </Button>
-                                </NavItem>
-                            </>
-                        :null
-                    }
-                </Navigation>
-            </Container>
-        </Wrapper>
-        :<Nav />  
+
+            <Wrapper>
+                <NavOverlay />
+                <Container>
+
+        <LogoTag>
+            <Logo src="/Group-2-3.svg" />
+        </LogoTag>
+ 
+          <Navigation burger={isOpen} isMobile={isMobile}>
+            <NavItem href="#Skills" >Skills</NavItem>
+            <NavItem href="#Projects" >Projects</NavItem>
+            <NavButton href="mailto: karimzitouni05@gmail.com" >Let&#x27;s Talk</NavButton>
+          </Navigation>
+              <BurgerMenu>
+          <Hamburger color="white" toggled={isOpen} toggle={setOpen} size={25} />
+              </BurgerMenu>
+          </Container>
+            </Wrapper>
     )
 }
