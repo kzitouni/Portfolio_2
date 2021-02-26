@@ -29,10 +29,27 @@ export default function Projects(props){
       </LinksContainer>
     </ProjectItemContainer>
     <ProjectItemContainer>
+      <ImageTag href="https://bit.ly/homedecor10" target="_blank" >
+        <Image src="/homedecorproject.png" loading="lazy" alt="" />
+      </ImageTag>
+      <ProjectTitle>Home Decor Project</ProjectTitle>
+      <ProjectBody>HomeDecor is a modern responsive ecommerce site that is fully functional and was built using React and Next.js.</ProjectBody>
+      <ProjectDetails>React - Next.js - Javascript - HTML/CSS</ProjectDetails>
+      <LinksContainer>
+      <LinkImage href="https://github.com/kzitouni/Homedecor" target="_blank">
+      <AiFillGithub />
+      
+      </LinkImage>
+      <LinkImage href="http://bit.ly/homedecor10" target="_blank" >
+      <FiExternalLink />
+      </LinkImage>
+      </LinksContainer>
+    </ProjectItemContainer>
+    <ProjectItemContainer>
       <ImageTag href="https://bit.ly/shopspace10" target="_blank" >
         <Image src="/Shopspace_Project.png" loading="lazy" alt="" />
       </ImageTag>
-      <ProjectTitle>Shopspace Website</ProjectTitle>
+      <ProjectTitle>Shopspace Project</ProjectTitle>
       <ProjectBody>Built a modern responsive landing page called Shopspace using React and Next.js.</ProjectBody>
       <ProjectDetails>React - Next.js - Javascript - HTML/CSS</ProjectDetails>
       <LinksContainer>
@@ -45,6 +62,7 @@ export default function Projects(props){
       </LinkImage>
       </LinksContainer>
     </ProjectItemContainer>
+
     <ProjectItemContainer>
       <ImageTag href="https://github.com/kzitouni/Outclass" target="_blank">
         <Image src="/Outclass_Project.png" loading="lazy" alt="" />
