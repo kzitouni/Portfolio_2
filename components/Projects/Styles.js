@@ -97,9 +97,8 @@ export const ProjectsContainer = styled.div`
   display: flex;
   width: 100%;
   margin-top: 40px;
-  -webkit-justify-content: space-around;
   -ms-flex-pack: distribute;
-  justify-content: space-around;
+  justify-content: space-between;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
