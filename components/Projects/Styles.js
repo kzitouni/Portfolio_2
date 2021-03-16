@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
 export const Wrapper = styled.div`
   display: -webkit-box;
@@ -8,7 +8,7 @@ export const Wrapper = styled.div`
   margin-top: 160px;
   padding-top: 0px;
   padding-bottom: 0px;
-  -webkit-box-pack: center; 
+  -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -41,8 +41,8 @@ export const Container = styled.div`
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-    @media ${(props) => props.theme.laptop} {
-        margin-right: 50px;
+  @media ${(props) => props.theme.laptop} {
+    margin-right: 50px;
     margin-left: 50px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -60,14 +60,12 @@ export const Container = styled.div`
   }
 `;
 
-
 export const Subtitle = styled.h3`
   color: #28c29d;
   font-size: 18px;
   font-weight: 600;
   text-align: center;
   letter-spacing: 1.5px;
-
 `;
 
 export const Title = styled.h2`
@@ -88,7 +86,7 @@ export const Title = styled.h2`
     font-size: 32px;
     line-height: 38px;
   }
-`
+`;
 
 export const ProjectsContainer = styled.div`
   display: -webkit-box;
@@ -105,8 +103,8 @@ export const ProjectsContainer = styled.div`
   -webkit-align-content: stretch;
   -ms-flex-line-pack: stretch;
   align-content: stretch;
-  `;
-  export const ImageTag = styled.a`
+`;
+export const ImageTag = styled.a`
   overflow: hidden;
   border-radius: 5px;
   cursor: pointer;
@@ -131,59 +129,56 @@ export const ProjectItemContainer = styled.div`
   @media ${(props) => props.theme.tablet} {
     width: 100%;
   }
-  `
-
-
+`;
 
 export const Image = styled.img`
   border-radius: 5px;
   width: 100%;
   transition: transform 300ms cubic-bezier(0.445, 0.05, 0.55, 0.95),
     -webkit-transform 300ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
-    :hover {
-        -webkit-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  transform: scale(1.1);
-    }
-    `
+  :hover {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+`;
 
 export const ProjectTitle = styled.h3`
   color: #2d2369;
   font-size: 32px;
   font-weight: 700;
   margin-top: 20px;
-  `
+`;
 
 export const ProjectBody = styled.p`
   color: #515491;
   font-size: 14px;
   margin-top: 10px;
   line-height: 20px;
-`
+`;
 
 export const LinksContainer = styled.div`
-display: flex;
-margin-top: 30px;
-
-`
+  display: flex;
+  margin-top: 30px;
+`;
 
 export const LinkImage = styled.a`
-margin-right: 20px;
-cursor: pointer;
+  margin-right: 20px;
+  cursor: pointer;
   color: #515491;
-  opacity: .7;
-  transition: .3s 0s ease-in-out;
+  opacity: 0.7;
+  transition: 0.3s 0s ease-in-out;
   font-size: 35px;
   text-decoration: unset;
   :hover {
     opacity: 1;
     transform: scale(1.08, 1.08);
-}
-`
+  }
+`;
 
 export const ProjectDetails = styled.h6`
-margin-top: 40px;
-color: #28c29d;
-font-weight: 600;
-line-height: 24px;
-`
+  margin-top: 40px;
+  color: #28c29d;
+  font-weight: 600;
+  line-height: 24px;
+`;
