@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
   display: -ms-flexbox;
   display: flex;
   margin-top: 0px;
-  padding-top: 80px;
+  padding-top: 120px;
   padding-bottom: 100px;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
@@ -18,9 +18,8 @@ export const Wrapper = styled.div`
   align-items: center;
   background-color: #d1e8ff;
   @media ${(props) => props.theme.tablet} {
-    padding-top: 80px;
+    padding-top: 120px;
   }
-
 `;
 
 export const Container = styled.div`
