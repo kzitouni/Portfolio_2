@@ -13,7 +13,7 @@ export default function Hero(props){
           <Title>I am <Name>Karim Zitouni</Name><br />I&#x27;m a Front End Developer</Title>
           <Paragraph>I have over 2 years of front end experience, specializing in developing exceptionally modern websites, applications and everything in between!</Paragraph>
           <ButtonsContainer>
-            <OutlineButton href="/Karim_Zitouni_Res.pdf" target="_blank">View Resume</OutlineButton>
+            <OutlineButton href="/Karim-Zitouni_Resume.pdf" target="_blank">View Resume</OutlineButton>
             <FillButton href="mailto: karimzitouni05@gmail.com">Hire me!</FillButton>
           </ButtonsContainer>
           {/* <SocialText>Check out my Github:</SocialText>
